@@ -59,19 +59,23 @@ st.markdown("""
         color: #1a1a1a !important;
     }
     
-    /* Clean button styling - Soft Light Blue */
+    /* Clean button styling - Professional Blue */
     .stButton > button {
-        background-color: #a8d4f4 !important;
-        color: #1a1a1a !important;
+        background-color: #4a90e2 !important;
+        color: #ffffff !important;
         border: none !important;
-        border-radius: 6px;
-        padding: 0.6rem 1.2rem;
-        font-weight: 500;
+        border-radius: 8px;
+        padding: 0.7rem 1.4rem;
+        font-weight: 600;
         width: 100%;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
     }
     
     .stButton > button:hover {
-        background-color: #7ec5f0 !important;
+        background-color: #3a7bc8 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
     
     /* Tab styling */
@@ -87,8 +91,8 @@ st.markdown("""
     
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
         background-color: #ffffff !important;
-        color: #0066cc !important;
-        border-bottom: 2px solid #0066cc !important;
+        color: #4a90e2 !important;
+        border-bottom: 2px solid #4a90e2 !important;
     }
     
     /* Expander styling */
@@ -107,11 +111,12 @@ st.markdown("""
         border: 1px solid #e0e0e0 !important;
     }
     
-    /* File uploader */
+    /* File uploader - Remove border */
     [data-testid="stFileUploader"] {
         background-color: #e8e8e8 !important;
-        border: 2px dashed #0066cc !important;
+        border: none !important;
         padding: 2rem !important;
+        border-radius: 8px;
     }
     
     /* File uploader text - dark */
@@ -129,13 +134,13 @@ st.markdown("""
     
     /* Browse files button - dark text */
     [data-testid="stFileUploader"] button {
-        color: #333333 !important;
-        background-color: #d0d0d0 !important;
-        border: 1px solid #999999 !important;
+        color: #ffffff !important;
+        background-color: #4a90e2 !important;
+        border: none !important;
     }
     
     [data-testid="stFileUploader"] button:hover {
-        background-color: #c0c0c0 !important;
+        background-color: #3a7bc8 !important;
     }
     
     /* File uploader SVG icon - dark */
@@ -184,7 +189,7 @@ st.markdown("""
     
     .info-message {
         background-color: #e3f2fd !important;
-        border-left: 4px solid #0066cc !important;
+        border-left: 4px solid #4a90e2 !important;
         padding: 1rem;
         border-radius: 4px;
         color: #1a1a1a !important;
@@ -208,19 +213,25 @@ st.markdown("""
         margin: 1.5rem 0;
     }
     
-    /* Download button - Soft Light Blue */
+    /* Download button - Professional Blue */
     .stDownloadButton > button {
-        background-color: #a8d4f4 !important;
-        color: #1a1a1a !important;
+        background-color: #4a90e2 !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
     }
     
     .stDownloadButton > button:hover {
-        background-color: #7ec5f0 !important;
+        background-color: #3a7bc8 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
     
     /* Spinner text */
     [data-testid="stSpinner"] {
-        color: #0066cc !important;
+        color: #4a90e2 !important;
     }
     </style>
 """, unsafe_allow_html=True)
