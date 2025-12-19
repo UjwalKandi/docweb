@@ -23,32 +23,47 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ==================== MINIMALIST THEME ====================
+# ==================== CLEAN WHITE THEME ====================
 
 st.markdown("""
     <style>
-    /* Remove excessive padding */
-    [data-testid="stMainBlockContainer"] {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    
-    /* Clean typography */
-    body, p, span, li, a {
+    /* White background throughout */
+    body {
+        background-color: #ffffff !important;
         color: #1a1a1a !important;
-        font-size: 0.95rem;
     }
     
-    /* Strong contrast for text */
-    [data-testid="stMarkdownContainer"] {
+    [data-testid="stAppViewContainer"] {
+        background-color: #ffffff !important;
+    }
+    
+    [data-testid="stMainBlockContainer"] {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+    }
+    
+    [data-testid="stSidebar"] {
+        background-color: #f8f8f8 !important;
+    }
+    
+    /* Text - Dark Grey/Black */
+    p, span, div, li, a {
+        color: #1a1a1a !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a !important;
+    }
+    
+    [data-testid="stMarkdownContainer"] p {
         color: #1a1a1a !important;
     }
     
     /* Clean button styling */
     .stButton > button {
-        background-color: #0066cc;
-        color: white;
-        border: none;
+        background-color: #0066cc !important;
+        color: white !important;
+        border: none !important;
         border-radius: 6px;
         padding: 0.6rem 1.2rem;
         font-weight: 500;
@@ -56,96 +71,115 @@ st.markdown("""
     }
     
     .stButton > button:hover {
-        background-color: #0052a3;
+        background-color: #0052a3 !important;
     }
     
     /* Tab styling */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 0;
+        background-color: #ffffff !important;
+        border-bottom: 1px solid #e0e0e0;
     }
     
     .stTabs [data-baseweb="tab"] {
-        padding: 0.5rem 1rem;
-        border-bottom: 2px solid #e0e0e0;
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
     }
     
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        border-bottom: 2px solid #0066cc;
-        color: #0066cc;
+        background-color: #ffffff !important;
+        color: #0066cc !important;
+        border-bottom: 2px solid #0066cc !important;
     }
     
     /* Expander styling */
     [data-testid="stExpander"] {
+        background-color: #f8f8f8 !important;
         border: 1px solid #e0e0e0 !important;
-        border-radius: 6px;
+    }
+    
+    [data-testid="stExpanderDetails"] {
+        background-color: #ffffff !important;
     }
     
     /* Metric styling */
     [data-testid="stMetricContainer"] {
-        background-color: #f5f5f5;
-        padding: 1rem;
-        border-radius: 6px;
+        background-color: #f8f8f8 !important;
+        border: 1px solid #e0e0e0 !important;
     }
     
-    /* Remove shadows */
-    [data-testid="stColumn"] {
-        box-shadow: none;
-    }
-    
-    /* Clean divider */
-    hr {
-        margin: 1.5rem 0;
-        border-color: #e0e0e0;
-    }
-    
-    /* File uploader styling */
+    /* File uploader */
     [data-testid="stFileUploader"] {
-        border: 2px dashed #0066cc;
-        border-radius: 6px;
-        padding: 2rem;
+        background-color: #ffffff !important;
+        border: 2px dashed #0066cc !important;
     }
     
-    /* Info/Success/Error boxes */
-    .info-message {
-        background: #e3f2fd;
-        border-left: 4px solid #0066cc;
-        padding: 1rem;
-        border-radius: 4px;
-        color: #1a1a1a;
-        margin: 1rem 0;
+    /* Input fields */
+    .stTextInput > div > div > input {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border: 1px solid #ccc !important;
     }
     
+    .stSelectbox > div > div > select {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    /* Checkbox styling */
+    .stCheckbox > label {
+        color: #1a1a1a !important;
+    }
+    
+    /* Success/Info/Error boxes */
     .success-message {
-        background: #e8f5e9;
-        border-left: 4px solid #28a745;
+        background-color: #e8f5e9 !important;
+        border-left: 4px solid #28a745 !important;
         padding: 1rem;
         border-radius: 4px;
-        color: #1a1a1a;
+        color: #1a1a1a !important;
         margin: 1rem 0;
     }
     
     .error-message {
-        background: #ffebee;
-        border-left: 4px solid #dc3545;
+        background-color: #ffebee !important;
+        border-left: 4px solid #dc3545 !important;
         padding: 1rem;
         border-radius: 4px;
-        color: #1a1a1a;
+        color: #1a1a1a !important;
         margin: 1rem 0;
     }
     
-    /* Section spacing */
-    .section-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+    .info-message {
+        background-color: #e3f2fd !important;
+        border-left: 4px solid #0066cc !important;
+        padding: 1rem;
+        border-radius: 4px;
+        color: #1a1a1a !important;
+        margin: 1rem 0;
     }
     
-    /* Minimal header */
-    [data-testid="stHeader"] {
-        background: white;
-        border-bottom: 1px solid #e0e0e0;
+    /* Code blocks */
+    [data-testid="stCode"] {
+        background-color: #f5f5f5 !important;
+        color: #1a1a1a !important;
+    }
+    
+    /* Divider */
+    hr {
+        border-color: #e0e0e0 !important;
+        margin: 1.5rem 0;
+    }
+    
+    /* Download button */
+    .stDownloadButton > button {
+        background-color: #0066cc !important;
+        color: white !important;
+    }
+    
+    /* Spinner text */
+    [data-testid="stSpinner"] {
+        color: #0066cc !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -243,12 +277,6 @@ with tab1:
         
         # Extract Section
         st.markdown("### 2. Extract Text")
-        
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            extract_text = "Extract with PaddleOCR-VL"
-        with col2:
-            pass
         
         if st.button("🔍 Extract", key="btn_extract", use_container_width=True):
             with st.spinner("Extracting text from PDF..."):
