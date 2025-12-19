@@ -109,33 +109,40 @@ st.markdown("""
     
     /* File uploader */
     [data-testid="stFileUploader"] {
-        background-color: #f8f8f8 !important;
+        background-color: #e8e8e8 !important;
         border: 2px dashed #0066cc !important;
+        padding: 2rem !important;
     }
     
-    /* File uploader text - white */
+    /* File uploader text - dark */
     [data-testid="stFileUploader"] [data-testid="stText"] {
-        color: #ffffff !important;
+        color: #333333 !important;
     }
     
     [data-testid="stFileUploader"] p {
-        color: #ffffff !important;
+        color: #333333 !important;
     }
     
     [data-testid="stFileUploader"] span {
-        color: #ffffff !important;
+        color: #333333 !important;
     }
     
-    /* Browse files button - white text */
+    /* Browse files button - dark text */
     [data-testid="stFileUploader"] button {
-        color: #ffffff !important;
+        color: #333333 !important;
+        background-color: #d0d0d0 !important;
+        border: 1px solid #999999 !important;
     }
     
-    /* File uploader SVG icon - white */
+    [data-testid="stFileUploader"] button:hover {
+        background-color: #c0c0c0 !important;
+    }
+    
+    /* File uploader SVG icon - dark */
     [data-testid="stFileUploader"] svg {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        color: #333333 !important;
+        stroke: #333333 !important;
+        fill: #333333 !important;
     }
     
     /* Input fields */
