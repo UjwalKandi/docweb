@@ -113,6 +113,31 @@ st.markdown("""
         border: 2px dashed #0066cc !important;
     }
     
+    /* File uploader text - white */
+    [data-testid="stFileUploader"] [data-testid="stText"] {
+        color: #ffffff !important;
+    }
+    
+    [data-testid="stFileUploader"] p {
+        color: #ffffff !important;
+    }
+    
+    [data-testid="stFileUploader"] span {
+        color: #ffffff !important;
+    }
+    
+    /* Browse files button - white text */
+    [data-testid="stFileUploader"] button {
+        color: #ffffff !important;
+    }
+    
+    /* File uploader SVG icon - white */
+    [data-testid="stFileUploader"] svg {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
     /* Input fields */
     .stTextInput > div > div > input {
         background-color: #ffffff !important;
@@ -442,7 +467,7 @@ with tab3:
         2. Get common access token
         3. Add to `.env` file:
         """)
-        st.markdown('<div style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; margin: 0.5rem 0;"><code style="color: #1a1a1a;">BAIDU_ACCESS_TOKEN=your_token</code></div>', unsafe_allow_html=True)
+        st.markdown('<div style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; margin: 0.5rem 0;"><code style="color: #ffffff;">BAIDU_ACCESS_TOKEN=your_token</code></div>', unsafe_allow_html=True)
         st.markdown("4. Restart app")
     
     with col2:
