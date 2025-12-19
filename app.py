@@ -1,5 +1,5 @@
 """
-PDF to Webpage Converter - Streamlit App (Minimalist Edition)
+DocWeb - Streamlit App (Minimalist Edition)
 Clean, simple interface with proper contrast
 """
 
@@ -17,7 +17,7 @@ load_dotenv()
 # ==================== CONFIG ====================
 
 st.set_page_config(
-    page_title="PDF to Webpage",
+    page_title="DocWeb",
     page_icon="📄",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -244,8 +244,8 @@ def safe_generate_html(markdown, title, access_token):
 
 st.markdown("""
     <div style="padding: 2rem 0; text-align: center; border-bottom: 1px solid #e0e0e0; margin-bottom: 2rem;">
-        <h1 style="margin: 0; color: #1a1a1a; font-size: 2.2em;">📄 PDF to Webpage</h1>
-        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 1rem;">Convert PDFs to responsive webpages using AI</p>
+        <h1 style="margin: 0; color: #1a1a1a; font-size: 2.2em;">📄 DocWeb</h1>
+        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 1rem;">Transform PDFs into responsive webpages with Baidu AI (PaddleOCR-VL & ERNIE)</p>
     </div>
 """, unsafe_allow_html=True)
 
@@ -308,7 +308,7 @@ with tab1:
                         markdown = converter.add_metadata(
                             markdown,
                             title=uploaded_file.name.replace('.pdf', ''),
-                            author="PDF to Webpage",
+                            author="DocWeb",
                             date=datetime.now().strftime("%Y-%m-%d")
                         )
                         st.session_state.markdown_content = markdown
