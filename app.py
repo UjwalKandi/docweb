@@ -98,7 +98,7 @@ st.markdown("""
     }
     
     [data-testid="stExpanderDetails"] {
-        background-color: #ffffff !important;
+        background-color: #f8f8f8 !important;
     }
     
     /* Metric styling */
@@ -109,7 +109,7 @@ st.markdown("""
     
     /* File uploader */
     [data-testid="stFileUploader"] {
-        background-color: #ffffff !important;
+        background-color: #f8f8f8 !important;
         border: 2px dashed #0066cc !important;
     }
     
@@ -161,7 +161,12 @@ st.markdown("""
     
     /* Code blocks */
     [data-testid="stCode"] {
-        background-color: #f5f5f5 !important;
+        background-color: #f8f8f8 !important;
+        color: #1a1a1a !important;
+    }
+    
+    /* Code block text color */
+    [data-testid="stCode"] code {
         color: #1a1a1a !important;
     }
     
@@ -436,11 +441,9 @@ with tab3:
         1. Register at [Baidu AI Studio](https://aistudio.baidu.com)
         2. Get common access token
         3. Add to `.env` file:
-        ```
-        BAIDU_ACCESS_TOKEN=your_token
-        ```
-        4. Restart app
         """)
+        st.markdown('<div style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; margin: 0.5rem 0;"><code style="color: #1a1a1a;">BAIDU_ACCESS_TOKEN=your_token</code></div>', unsafe_allow_html=True)
+        st.markdown("4. Restart app")
     
     with col2:
         st.markdown("### Technology Stack")
